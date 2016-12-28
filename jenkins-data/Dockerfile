@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM centos:centos7
 MAINTAINER Neil Millard
 
 RUN useradd -d "/var/jenkins_home" -u 1000 -m -s /bin/bash jenkins && \
