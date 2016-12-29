@@ -11,6 +11,6 @@ nginx:
   ports:
      - "80:80"
   links:
-     - jenkinsmaster:jenkins-master
+     - master:jenkins-master
 slave:
   build: jenkins-slave
