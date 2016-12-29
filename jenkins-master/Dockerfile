@@ -70,6 +70,10 @@ COPY plugins.sh /usr/local/bin/plugins.sh
 RUN chmod +x /usr/local/bin/plugins.sh
 RUN chmod +x /usr/local/bin/jenkins.sh
 
+# Install default plugins
+COPY plugins.txt /tmp/plugins.txt
+RUN /usr/local/bin/plugins.sh /tmp/plugins.txt
+
 # Switch to the jenkins user
 USER jenkins
 
